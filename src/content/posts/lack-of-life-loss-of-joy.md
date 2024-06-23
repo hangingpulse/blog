@@ -2,6 +2,7 @@
 layout: "../../layouts/BlogPostLayout.astro"
 title: Lack of Life, Loss of Joy
 description: A personal and systemic perspective on the German film industry
+publishDate: '2024-06-23'
 ---
 
 Life is simple when you are writing. 
