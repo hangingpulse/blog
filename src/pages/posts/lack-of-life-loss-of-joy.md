@@ -1,5 +1,8 @@
-# Lack of life, loss of joy
-### *A personal and systemic perspective on the German film industry*
+---
+layout: "../../layouts/BlogPostLayout.astro"
+title: Lack of Life, Loss of Joy
+description: A personal and systemic perspective on the German film industry...
+---
 
 Life is simple when you are writing. 
 
