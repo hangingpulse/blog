@@ -10,6 +10,8 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@fontsource-variable/josefin-slab": "^5.0.20",
+    "@fontsource-variable/open-sans": "^5.0.29",
     "astro": "^4.10.3"
   }
 }
