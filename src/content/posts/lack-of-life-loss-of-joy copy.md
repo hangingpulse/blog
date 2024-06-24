@@ -2,7 +2,7 @@
 layout: "../../layouts/BlogPostLayout.astro"
 title: Lack of Life, Loss of Joy
 description: A personal and systemic perspective on the German film industry
-previewText: Life is simple when you are writing. You sit down with pen and paper and laptop and then you just put one word down and another and another. Life is not simple when you are a writer, though. And it is unbearably difficult when you’re a talented screenwriter in Germany. 
+previewText: '<p>Life is simple when you are writing.</p><p>You sit down with pen and paper and laptop and then you just put one word down and another and another. Life is not simple when you are a writer, though. And it is unbearably difficult when you’re a talented screenwriter in Germany.</p><p>You see, we have it all. The funding, the education, the technical knowledge. We have a solid infrastructure and a social security net. We should be making great movies and sometimes we do. But mostly we don’t. Even worse, we don’t even make bad movies. Bad movies can make you feel <strong>something</strong>. We make movies that leave us empty when the credits roll. Movies that are forgettable. That certain something that they lack: Call it personality. Call it soul or profoundness. For the purpose of this text I will call it life.</p><p>German movies lack life.</p>' 
 publishDate: 2024-06-23
 ---
 

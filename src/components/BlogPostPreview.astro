@@ -1,4 +1,5 @@
 ---
+import { Icon } from 'astro-icon/components'
 const { post } = Astro.props
 ---
 <div class="container">
@@ -6,15 +7,14 @@ const { post } = Astro.props
         <h1 class="title">{post.data.title}</h1>
     <h3 class="subtitle">{post.data.description}</h3>
     </div>
-    <div class="content">
-    <p class="preview">{post.data.previewText}</p>
-    </div>
+    <div set:html={post.data.previewText} class="preview"/>
     <div class="footer">
+        <!-- <time datetime={post.data.publishDate.toISOString()}>{post.data.publishDate.toDateString().slice(4,15)}</time> -->
+        <a href={`/posts/${post.slug}`}><Icon name="maki:arrow" /></a>
 
-        <a href={`/posts/${post.slug}`}>...read</a>
+        
     </div>
 </div>
-    <!-- <time datetime={post.data.publishDate.toISOString()}>{post.data.publishDate.toDateString()}</time> -->
 <style>
     .container {
          display: flex;
@@ -30,28 +30,58 @@ const { post } = Astro.props
 
     .content {
 
-        padding: var(--size-2);
+        padding: var(--size-3);
     }
     .header {
-        background-color: var(--color-secondary-light);
-        padding: var(--size-2);
+        background-color: var(--color-main-light);
+        padding: var(--size-3);
+        color: var(--color-highlight);
+    }
+    .info {
+        padding: var(--size-1);
+        background-color: var(--color-bg-light);
     }
     h1 {
         line-height: var(--font-lineheight-1);
-        color: var(--color-highlight);
+        /* color: var(--color-bg-light); */
     }
 
     h3 {
-        color: var(--color-highlight);
+        /* color: var(--color-bg-light); */
         line-height: var(--font-lineheight-2);
         font-size: var(--font-size-2);
         font-weight: 400;
     }
+    .preview {
+        padding: var(--size-2) var(--size-3);
+        padding-bottom: 0;
+    }
+    .preview :global(p) {
+        margin-bottom: var(--font-size-0);
+    }
     .footer {
-        /* background-color: var(--color-secondary-light); */
-        padding: var(--size-1);
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: right; 
+        align-items: center;
+        background-color: var(--color-highlight);
+        padding: var(--size-2) var(--size-3);
+    }
+    time {
+        min-width: fit-content;
+        display: block;
     }
     a {
-        text-align: right;
+        display: block;
+        text-align: left;
+        z-index: 0;
+
+        text-decoration: none;
+        color: var(--color-main-light);
+    }
+    [data-icon] {
+        display: inline-block;
+        font-size: 2rem;
     }
 </style>
