@@ -2,16 +2,56 @@
 const { post } = Astro.props
 ---
 <div class="container">
-    <h1>{post.data.title}</h1>
+    <div class="header">
+        <h1 class="title">{post.data.title}</h1>
     <h3 class="subtitle">{post.data.description}</h3>
+    </div>
+    <div class="content">
     <p class="preview">{post.data.previewText}</p>
-    <a href={`/posts/${post.slug}`}>...read</a>
-    <time datetime={post.data.publishDate.toISOString()}>{post.data.publishDate.toDateString()}</time>
+    </div>
+    <div class="footer">
+
+        <a href={`/posts/${post.slug}`}>...read</a>
+    </div>
 </div>
+    <!-- <time datetime={post.data.publishDate.toISOString()}>{post.data.publishDate.toDateString()}</time> -->
 <style>
     .container {
          display: flex;
          flex-direction: column;
-         border: 0.1rem black solid;
+
+         background-color: var(--color-bg-light);
+         border: var(--border-size-1) solid var(--gray-4); 
+         border-radius: var(--radius-2);
+         box-shadow: var(--shadow-2);
+
+        overflow: hidden;
+    }
+
+    .content {
+
+        padding: var(--size-2);
+    }
+    .header {
+        background-color: var(--color-secondary-light);
+        padding: var(--size-2);
+    }
+    h1 {
+        line-height: var(--font-lineheight-1);
+        color: var(--color-highlight);
+    }
+
+    h3 {
+        color: var(--color-highlight);
+        line-height: var(--font-lineheight-2);
+        font-size: var(--font-size-2);
+        font-weight: 400;
+    }
+    .footer {
+        /* background-color: var(--color-secondary-light); */
+        padding: var(--size-1);
+    }
+    a {
+        text-align: right;
     }
 </style>
