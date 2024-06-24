@@ -1,8 +1,22 @@
+@import "https://unpkg.com/open-props";
+:root {
+
+    --color-main-light: var(--teal-10);
+    --color-main-dark: ;
+    --color-font-light: white;
+    
+    --color-highlight: var(--yellow-3);
+
+    --font-sansserif: 'Open Sans Variable', Helvetica, sans-serif; 
+    --font-serif: 'Josefin Slab Variable', 'Times New Roman', Times, serif;
+}
 html {
-    font-family: 'Open Sans Variable', Helvetica, sans-serif;
+    font-size: 16px;
+    font-family: var(--font-sansserif);
+    
 }
 h1 {
-    font-family: 'Josefin Slab Variable', 'Times New Roman', Times, serif;
+    font-family: var(--font-serif);
     font-weight: 700;
     text-decoration: underline;
 }
