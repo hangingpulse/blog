@@ -1,0 +1,32 @@
+---
+import BasePageLayout from "./BasePageLayout.astro";
+import Header from "../components/Header.astro";
+import Sidebar from "../components/Sidebar.astro";
+---
+<BasePageLayout>
+    <Header/>
+    <div class="container">
+        <div class="content">
+            <slot/>
+        </div>
+        <div class="sidebar">
+            <Sidebar/>
+        </div>
+    </div>
+</BasePageLayout>
+<style>
+    .container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .content {
+        min-width: 200px;
+    }
+    .sidebar {
+        min-width: 200px;
+        text-align: left;
+    }
+
+</style>

@@ -1,0 +1,17 @@
+---
+const { post } = Astro.props
+---
+<div class="container">
+    <h1>{post.data.title}</h1>
+    <h3 class="subtitle">{post.data.description}</h3>
+    <p class="preview">{post.data.previewText}</p>
+    <a href={`/posts/${post.slug}`}>...read</a>
+    <time datetime={post.data.publishDate.toISOString()}>{post.data.publishDate.toDateString()}</time>
+</div>
+<style>
+    .container {
+         display: flex;
+         flex-direction: column;
+         border: 0.1rem black solid;
+    }
+</style>

@@ -1,8 +1,21 @@
 ---
-import BasePageLayout from "../layouts/BasePageLayout.astro"
-import Header from "../components/Header.astro"
+import MainPageLayout from "../layouts/MainPageLayout.astro"
+import PostList from "../components/PostList.astro"
+import Sidebar from "../components/Sidebar.astro";
+
+import { getCollection } from "astro:content";
+const allBlogPosts = await getCollection('posts')
 ---
-<BasePageLayout>
-	<Header>
-    Test
-</BasePageLayout>
+<MainPageLayout>
+    <PostList posts={allBlogPosts}/>
+</MainPageLayout>
+<style>
+    .content {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .postList {
+        max-width: 50%;
+    }
+</style>

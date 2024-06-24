@@ -2,7 +2,8 @@
 layout: "../../layouts/BlogPostLayout.astro"
 title: Lack of Life, Loss of Joy
 description: A personal and systemic perspective on the German film industry
-publishDate: '2024-06-23'
+previewText: Life is simple when you are writing. You sit down with pen and paper and laptop and then you just put one word down and another and another. Life is not simple when you are a writer, though. And it is unbearably difficult when you’re a talented screenwriter in Germany. 
+publishDate: 2024-06-23
 ---
 
 Life is simple when you are writing. 
