@@ -2,5 +2,36 @@
 import { getCollection } from "astro:content"
 const allBlogPosts = await getCollection('posts')
 ---
-<h2>Latest Posts</h2>
-{allBlogPosts.map(post => <p><a href={`/posts/${post.slug}`}>{post.data.title}</a></p>)}
+<div class="container">
+
+    <h2>Latest Posts</h2>
+    <div class="content">
+
+    {allBlogPosts.map(post => <p><a href={`/posts/${post.slug}`}>{post.data.title}</a></p>)}
+    </div>
+</div>
+<style>
+    .container {
+        display: flex;
+        flex-direction: column;
+        min-width: 20rem;
+        overflow: hidden;
+
+        background-color: var(--color-bg-light);
+        /* border: var(--border-size-2) solid black; */
+        border-radius: var(--radius-2);
+        box-shadow: var(--shadow-2);
+
+    }
+    h2 {
+        padding-left: var(--size-2);
+        background-color: var(--color-main-light);
+        color: var(--color-highlight);
+        font-family: var(--font-serif);
+    }
+    .content {
+        padding-left: var(--size-2);
+        min-height: 10rem;
+    }
+
+</style>

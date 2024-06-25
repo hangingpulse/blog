@@ -3,6 +3,7 @@ import BlogPostPreview from "./BlogPostPreview.astro"
 const { posts } = Astro.props
 
 ---
+<!-- <h1>Stuff to read</h1> -->
 <div class="container">
 {posts.map(post => <BlogPostPreview post={post}/>)}
 </div>

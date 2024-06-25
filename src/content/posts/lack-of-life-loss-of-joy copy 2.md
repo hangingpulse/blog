@@ -1,7 +1,7 @@
 ---
 layout: "../../layouts/BlogPostLayout.astro"
 title: Lack of Life, Loss of Joy
-description: A personal and systemic perspective on the German film industry
+description: A screenwriter's personal and systemic perspective on the German film industry
 previewText: '<p>Life is simple when you are writing.</p><p>You sit down with pen and paper and laptop and then you just put one word down and another and another. Life is not simple when you are a writer, though. And it is unbearably difficult when you’re a talented screenwriter in Germany.</p><p>You see, we have it all. The funding, the education, the technical knowledge. We have a solid infrastructure and a social security net. We should be making great movies and sometimes we do. But mostly we don’t. Even worse, we don’t even make bad movies. Bad movies can make you feel <strong>something</strong>. We make movies that leave us empty when the credits roll. Movies that are forgettable. That certain something that they lack: Call it personality. Call it soul or profoundness. For the purpose of this text I will call it life.</p><p>German movies lack life.</p>' 
 publishDate: 2024-06-23
 ---
@@ -18,7 +18,7 @@ In a movie narrative this dramatic realisation might have cost me my joy in writ
 
 Writing had also always helped me to sort the chaos in my head, bring me focus. So here I am, trying to write, trying to understand: Where did my joy go, where did the life go?
 
-### We are failing
+## We are failing
 
 Let’s start with acknowledging this: I am failing. A whole industry is failing. Again and again.
 
@@ -30,9 +30,12 @@ When the loss of joy hit me, I was already off-track. I was without a writing jo
 
 Right. So there I was, finally getting back on track. My agent told me she needed new ideas, so I wanted to create some fun one-pagers. Designing the layout myself, making it enjoyable to look at and easy to grasp the core of my idea. Maybe the stories wouldn’t sell but it would gain some attention and would put me back on the table as an interesting writer. Creating these documents was actually a pretty good plan. And yet I couldn’t do it. I was playing around with the page layout instead of working on the stories. And then I stopped doing that. I started feeling numb, then I started feeling anxious about feeling numb and then I started feeling numb again to not feel anxious anymore. I was a bad writer. I was a bad artist. 
 
-I kept asking myself: How can I turn my writing skill into success? What are the ideas I need to come up with? What does the market want? 
+I kept asking myself: How can I turn my writing skill into success? What are the ideas I need to come up with? What does the market want?
+
 And the market told me: We want IP-based stuff. Books, comics, songs, toys, whatever we can base a movie on. We want historical stories but with a modern take. Unique but universal. Young but still interesting for everyone. Diverse but not too much out there.
+
 I never asked myself: Why do I want this? What is success? Why am I afraid of failing?
+
 And the market never told me: We don’t know what we want. We are afraid. We are failing and we don’t know why.
 
 This isn’t a new insight, a new problem. But everyone has a different answer. Everyone has someone else to blame. I am guilty of this myself. I blamed the producers, the network executives, the directors. Other writers who accept bad conditions instead of saying no. I blamed the markets and capitalism. Netflix and Amazon and Tiktok and Disney and how they turn art into content. And all of it is true. Yet none of it goes deep enough. And blaming others doesn’t make the pain go away. It makes it worse. Joyless thoughts create joyless minds and joyless people.
@@ -40,7 +43,7 @@ We are all in this together and we can’t see it because we are part of the sys
 
 So, what is the life I am talking about? Let’s distract ourselves from our emotions about the state of the industry. Let’s dive into some inspiring theoretical thoughts. Let’s get to know Christopher Alexander.
 
-### What I talk about when I talk about life
+## What I talk about when I talk about life
 
 Alexander was an architect. That is what he thought about and wrote about. And yet “The Nature of Order”, the book that I will be referencing, is about so much more. It might be one of the most profound books on art ever written. It is about how beautiful things are created. Things that live. Things that bring us joy and not in a fulfilling-desire-kind-a-way but in a harmonious-and-simple-kind-a-way. Things that touch us deeply. We all know this feeling that he is talking about here. We might have experienced it somewhere else, in moments of friendship, moments in nature, a piece of art that moves us, makes us want to smile or cry, even if we suppress it. It is hard to define and to study but Alexander tries to do it anyway.
 
@@ -55,7 +58,7 @@ Both of these ideas are not completely wrong but also they are. They don’t go 
 
 We will get to that but first I want to take a look at how German screenplays are written.
 
-### Screenplays made in Germany
+## Screenplays made in Germany
 
 Let’s start with one way that is specific to the German system: screenplay funding. (Almost) every state in Germany has funding and there are a few national options as well. Here in Bavaria even first time writers without a credit can apply. You will get 25,000 Euro which is a decent amount of money. It can carry you for a bit even in a fairly expensive city like Munich. There is a catch, though. There always is. For your application you have to write a twenty-page summary of your story, called a *Treatment*.
 
@@ -79,11 +82,11 @@ Because Alexander makes a very important point: the difference between stuff tha
 
 It is the same for movies. There is only one way of writing a screenplay. And that is by writing a screenplay. We all have a different process, sure. Maybe your process includes writing a twenty-page-long sales document. I doubt it but it still doesn’t change the point: the personality of a screenplay arises in the specific process of writing it. The life unfolds in the process, how Alexander puts it.
 
-It is that simple. Life cannot be fabricated. It can only be generated. You only have to look at nature to understand that. A meadow isn’t planned, the ocean wasn’t planned. And yet they have beauty and profoundness that will still be there when we humans and our art is long gone. All that nature does is take one step at a time. Nature trusts the process. Nature doesn’t care about the outcome because it can’t control it.
+It is that simple. Life cannot be fabricated. It can only be generated. You only have to look at nature to understand that. A meadow isn’t planned, the ocean wasn’t planned. And yet they have beauty and profoundness that will still be there when us humans and our art is long gone. All that nature does is take one step at a time. Nature trusts the process. Nature doesn’t care about the outcome because it can’t control it.
 
 This is what Alexander understood and this is what we need to learn. 
 
-### Process in the Age of Industrialism
+## Process in the Age of Industrialism
 
 We are not only writing sales documents when applying for screenplay funding. Here in Germany we have to do this constantly. First there is the *idea paper*, maybe one page, still manageable. Then the *Exposé*, about five pages, getting more painful. Then the *Treatment*, 10-20 pages, the most hated document. No one wants to write it and no one wants to read it. Sometimes there is a *Bildertreatment*, the structure of a screenplay but the scenes are written in prose, which is at least somewhat useful. And finally even the screenplay is a sales document: you need it to apply for production funding or to convince the network executives.
 
@@ -106,11 +109,11 @@ So let me dream, just for a moment, about a process-oriented film industry.
 An industry where a sales document is not a screenplay and a screenplay is not the movie. Where the screenplay is our main communication tool, the way we screenwriters get the movie out of our head into the heads of other people. In a process-oriented industry we have to learn how to do this. How to communicate properly with the words we choose. This is not only about character and story, remember, it is about feeling, about mood, about soul. About life. And everyone else has to learn how to read screenplays. How to extract what is important to their role but also to extract what feeling it evokes in them. We have to learn to be authentic in our writing and in our reading.
 So, when writing, when reading, we will listen to the others, to the context, to all the tools we learned and especially to ourselves. We will decide each and every moment what the next steps will be, considering our values and the life in our story. And then we will follow this process, step by step.
 
-We will discover that the screenplay format is not enough for communicating our ideas. We need to find more ways and they are already out there. Trailers, images from other movies, test scenes, music, short stories, small models made of wood and paper, table reads, simply just talking about it. All of this and so much more can be part of our toolbox. We will find that following the writing process will eventually evolve into making the movie. And obviously, real world concerns are part of this. Allocating the production budget is part of it, bringing the movie to the audience are part of it. All of these concerns will not force themselves onto the process but they will be an integral part of it.
+We will discover that the screenplay format is not enough for communicating our ideas. We need to find more ways and they are already out there. Trailers, images from other movies, test scenes, music, short stories, small models made of wood and paper, table reads, simply just talking about it. All of this and so much more can be part of our toolbox. We will find that following the writing process will eventually evolve into making the movie. And obviously, real world concerns are part of this. Allocating the production budget is part of it, bringing the movie to the audience is part of it. All of these concerns will not force themselves onto the process but they will be an integral part of it.
 
 Is that too much to ask? For now, probably, yes. But one can dream.
 
-### Letting go
+## Letting go
 
 For now let me give you a personal answer to the question what we need to do. And it frightens me to the core: We have to let go.
 
@@ -118,7 +121,8 @@ Let go of getting rich by making movies. Let go of wowing the audience. Let go o
 
 I don’t like this at all. My mind tells me that I am wrong or that something is missing. That I am not considering this or that. That we can’t simply change how we do stuff. That the system is built this way because it makes sense. And I don’t blame my mind for being afraid. Letting go of who we think we are and who we think we want to be is the hardest thing we can do. 
 
-
 So I come back to this: I’m not letting go of writing. I am letting go of having success as a writer because I cannot control it. I can only control my process. The actions I take every day. The words I choose to fill my pages with. And there it is, the life. Right there. It is not something I write towards, it is the writing itself. It is the process.
 
-I am still afraid, every day. What if it won’t work. What if I’m wrong. What if I am failing again. What if. There seems to be a bottomless pit beneath me, a dark hole waiting to swallow me and my ideas, my creativity, my self-worth, my identity. And yet, when I close my eyes. When I let the fear be what it is and call it by its name. When I stop overthinking and planning and plotting and when I start trusting the process. When everything is calm and simple. Then I can feel the life. I can feel the joy. And I want to believe that letting go will be worth it. Because if life isn’t worth it, if joy isn’t worth it, what is.
+I am still afraid, every day. What if it won’t work. What if I’m wrong. What if I am failing again. What if. There seems to be a bottomless pit beneath me, a dark hole waiting to swallow me and my ideas, my creativity, my self-worth, my identity. And yet, when I close my eyes. When I let the fear be what it is and call it by its name. When I stop overthinking and planning and plotting and when I start trusting the process. When everything is calm and simple. Then I can feel the life. I can feel the joy. And I want to believe that letting go will be worth it. 
+
+Because if life isn’t worth it, if joy isn’t worth it, what is.

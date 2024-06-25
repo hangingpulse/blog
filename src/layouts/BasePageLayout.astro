@@ -3,6 +3,8 @@ import '@fontsource-variable/josefin-slab'
 import '@fontsource-variable/open-sans'
 import '../styles/global-reset.css'
 import '../styles/global.css'
+
+import { ViewTransitions } from 'astro:transitions';
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -10,6 +12,7 @@ import '../styles/global.css'
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>hangingpulse</title>
+    <ViewTransitions/>
 </head>
 <body>
    <slot/> 
