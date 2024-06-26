@@ -1,12 +1,19 @@
 ---
 import { Icon } from 'astro-icon/components'
+import { Image } from 'astro:assets'
+import header from '../content/images/lack-of-life-loss-of-joy-heading.png'
 const { post } = Astro.props
 ---
-<div class="container">
+<div class="container noise">
     <div class="header">
-        <h1 class="title">{post.data.title}</h1>
-    <h3 class="subtitle">{post.data.description}</h3>
+        <Image src={header} 
+        alt="lack of life, loss of life"
+        widths={[240, 540, 720, header.width,]}
+        sizes={`(max-width: 360px) 240px, (max-width: 720px) 540px, (max-width: 1600px) 720px, ${header.width}px`}
+        />
+        <!-- <h1 class="title">{post.data.title}</h1> -->
     </div>
+    <h3 class="subtitle">{post.data.description}</h3>
     <div set:html={post.data.previewText} class="preview"/>
     <div class="footer">
         <!-- <time datetime={post.data.publishDate.toISOString()}>{post.data.publishDate.toDateString().slice(4,15)}</time> -->
@@ -19,39 +26,52 @@ const { post } = Astro.props
     .container {
          display: flex;
          flex-direction: column;
+        position: relative;
 
-         background-color: var(--color-bg-light);
+         /* background-color: var(--color-bg-light); */
          border: var(--border-size-1) solid var(--gray-4); 
          border-radius: var(--radius-2);
-         box-shadow: var(--shadow-2);
+         box-shadow: var(--shadow-1);
 
-        overflow: hidden;
+        /* overflow: hidden; */
+    }
+    .noise {
+        /* background: var(--color-bg-light); */
+        background-image: url(../assets/handmadepaper.webp);
+        background-repeat: repeat;
+        /* background-size: contain; */
+        /* background-image: url(../assets/card-background.svg); */
     }
 
-    .content {
-
-        padding: var(--size-3);
-    }
     .header {
-        /* background-color: #70919C; */
-        background-color: var(--color-main-light); 
-        padding: var(--size-3);
-        color: var(--color-highlight);
-    }
-    .info {
-        padding: var(--size-1);
-        background-color: var(--color-bg-light);
-    }
-    h1 {
-        line-height: var(--font-lineheight-1);
-        /* color: var(--color-bg-light); */
-    }
+        width: 100%;
+        aspect-ratio: 1200/160;
+        position: relative;
 
+        margin-bottom: var(--size-2);
+        border-bottom: var(--border-size-2) solid black;
+        /* background-color: #70919C; */
+        /* background-color: var(--color-main-light);  */
+        /* padding: var(--size-3); */
+        /* color: var(--color-highlight); */
+    }
+    img {
+        position: absolute;
+        max-width: 100%;
+        height: auto;
+        top: -0.2rem;
+        left: -0.8rem;
+        transform: rotate(-2deg);
+        opacity: 90%;
+    }
+    
     h3 {
         /* color: var(--color-bg-light); */
+        padding-left: var(--size-3);
+        margin-bottom: var(--size-2);
         line-height: var(--font-lineheight-2);
         font-size: var(--font-size-2);
-        font-weight: 400;
+        font-weight: 700;
     }
     .preview {
         padding: var(--size-2) var(--size-3);
