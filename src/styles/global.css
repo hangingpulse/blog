@@ -1,20 +1,18 @@
 @import "https://unpkg.com/open-props";
 :root {
-
-    --color-main-light: #00303F;
-    --color-secondary-light: #CAE4DB;
-    --color-bg-light: #F5F4F4;
+    --color-main-light: #00303f;
+    --color-secondary-light: #cae4db;
+    --color-bg-light: #f5f4f4;
     --color-main-dark: ;
     --color-font-light: white;
-    
-    --color-highlight: #CDAC81;
 
-    --font-sansserif: 'Open Sans Variable', Helvetica, sans-serif; 
-    --font-serif: 'Josefin Slab Variable', 'Times New Roman', Times, serif;
+    --color-highlight: #cdac81;
+
+    --font-sansserif: "Open Sans Variable", Helvetica, sans-serif;
+    --font-serif: "Josefin Slab Variable", "Times New Roman", Times, serif;
 }
 html {
     font-family: var(--font-sansserif);
-    
 }
 h1 {
     font-family: var(--font-serif);
@@ -23,4 +21,7 @@ h1 {
 h3 {
     font-weight: 200;
     font-style: italic;
+}
+p {
+    margin-bottom: var(--font-size-0);
 }

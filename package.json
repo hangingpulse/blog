@@ -13,10 +13,12 @@
     "@fontsource-variable/josefin-slab": "^5.0.20",
     "@fontsource-variable/open-sans": "^5.0.29",
     "astro": "^4.10.3",
-    "astro-icon": "^1.1.0",
-    "autoprefixer": "^10.4.19"
+    "astro-icon": "^1.1.0"
   },
   "devDependencies": {
-    "@iconify-json/maki": "^1.1.24"
+    "@iconify-json/maki": "^1.1.24",
+    "autoprefixer": "^10.4.19",
+    "postcss-csso": "^6.0.1",
+    "postcss-preset-env": "^9.5.14"
   }
 }

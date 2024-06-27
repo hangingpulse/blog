@@ -1,25 +1,27 @@
 ---
-import '@fontsource-variable/josefin-slab'
-import '@fontsource-variable/open-sans'
-import '../styles/global-reset.css'
-import '../styles/global.css'
+import "@fontsource-variable/josefin-slab";
+import "@fontsource-variable/open-sans";
+import "../styles/global-reset.css";
+import "../styles/global.css";
 
-import { ViewTransitions } from 'astro:transitions';
+import { ViewTransitions } from "astro:transitions";
 ---
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>hangingpulse</title>
-    <ViewTransitions/>
-</head>
-<body>
-   <slot/> 
-</body>
-<style>
-   body {
-        background: var(--color-secondary-light);
-   } 
-</style>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>hangingpulse</title>
+        <ViewTransitions />
+    </head>
+    <body>
+        <slot />
+        <style>
+            body {
+                background: var(--color-bg-light);
+                background-image: url(../assets/handmadepaper.webp);
+            }
+        </style>
+    </body>
 </html>
