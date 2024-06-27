@@ -10,6 +10,8 @@
 
     --font-sansserif: "Open Sans Variable", Helvetica, sans-serif;
     --font-serif: "Josefin Slab Variable", "Times New Roman", Times, serif;
+
+    --border-thick: var(--border-size-3) black solid;
 }
 html {
     font-family: var(--font-sansserif);
