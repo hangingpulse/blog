@@ -68,7 +68,7 @@ const headerImage =
     <div set:html={post.data.previewText} class="preview" />
     <div class="footer">
         <a href={`/posts/${post.slug}`}>
-            <ImageToggleComponent
+            <!-- <ImageToggleComponent
                 mobileImgUrl={post.data.imgCallToActionMobile}
                 mobileWidth={600}
                 mobileHeight={100}
@@ -76,14 +76,13 @@ const headerImage =
                 desktopWidth={1200}
                 desktopHeight={100}
                 toggleWidth={640}
+            /> -->
+            <Image
+                src={images[post.data.imgCallToActionHover]()}
+                alt="lack of life, loss of life"
+                widths={[240, 540, 720]}
+                sizes={`(max-width: 360px) 240px, (max-width: 720px) 540px, (max-width: 1600px) 720px`}
             />
-            <!-- <Image
-            src={images[post.data.imgCallToActionHover]()}
-            class="img-hover-on"
-            alt="lack of life, loss of life"
-            widths={[240, 540, 720]}
-            sizes={`(max-width: 360px) 240px, (max-width: 720px) 540px, (max-width: 1600px) 720px`}
-        /> -->
         </a>
     </div>
 </div>
