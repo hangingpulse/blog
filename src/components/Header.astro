@@ -1,5 +1,9 @@
 ---
+import type { ImageMetadata } from "astro";
+import { Debug } from "astro:components";
+import { Image } from "astro:assets";
 ---
+
 <nav>
     <div>
         <h1>hangingpulse.com</h1>
@@ -31,7 +35,7 @@
     ul {
         display: flex;
         flex-direction: row;
-        gap: var(--size-7)
+        gap: var(--size-7);
     }
 
     li {
@@ -40,13 +44,11 @@
     }
     a {
         color: var(--color-highlight);
-        
+
         text-decoration: none;
     }
 
     a:hover {
         text-decoration: underline;
     }
-
-
 </style>

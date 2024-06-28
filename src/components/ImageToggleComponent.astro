@@ -1,0 +1,35 @@
+---
+import type { ImageMetadata } from "astro";
+import { getImage } from "astro:assets";
+
+const {
+    mobileImgUrl,
+    mobileWidth,
+    mobileHeight,
+    desktopImgUrl,
+    desktopWidth,
+    desktopHeight,
+    toggleWidth,
+    alt,
+} = Astro.props;
+
+const mobileImg = await getImage({
+    src: mobileImgUrl,
+    format: "webp",
+    width: mobileWidth,
+    height: mobileHeight,
+});
+
+const desktopImg = await getImage({
+    src: desktopImgUrl,
+    format: "webp",
+    width: desktopWidth,
+    height: desktopHeight,
+});
+---
+
+<picture>
+    <source media=`(max-width: ${toggleWidth - 1}px)` srcset={mobileImg.src} />
+    <source media=`(min-width: ${toggleWidth})` srcset={desktopImg.src} />
+    <img src={desktopImg.src} alt={alt} />
+</picture>

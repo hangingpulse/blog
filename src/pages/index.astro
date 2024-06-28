@@ -1,13 +1,14 @@
 ---
-import MainPageLayout from "../layouts/MainPageLayout.astro"
-import PostList from "../components/PostList.astro"
+import MainPageLayout from "../layouts/MainPageLayout.astro";
+import PostList from "../components/PostList.astro";
 import Sidebar from "../components/Sidebar.astro";
 
 import { getCollection } from "astro:content";
-const allBlogPosts = await getCollection('posts')
+const allBlogPosts = await getCollection("posts");
 ---
+
 <MainPageLayout>
-    <PostList posts={allBlogPosts}/>
+    <PostList posts={allBlogPosts} />
 </MainPageLayout>
 <style>
     .content {

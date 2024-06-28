@@ -1,43 +1,100 @@
 ---
-import { Icon } from "astro-icon/components";
 import { Image } from "astro:assets";
-import header from "../content/images/lack-of-life-loss-of-joy-heading.png";
-import quote from "../content/images/lack-of-life-loss-of-joy-doodle.png";
 const { post } = Astro.props;
+
+import type { ImageMetadata } from "astro";
+import ImageToggleComponent from "./ImageToggleComponent.astro";
+
+const images = import.meta.glob<{ default: ImageMetadata }>(
+    "/src/content/images/*.{jpeg,jpg,png,gif}"
+);
+if (!images[post.data.imgHeading])
+    throw new Error(
+        `"${post.data.imgHeading}" does not exist in glob: "src/content/images/*.{jpeg,jpg,png,gif}"`
+    );
+
+const headerImage =
+    "/assets/lack-of-life-loss-of-joy/lack-of-life-loss-of-joy-header.png";
 ---
 
 <div class="wrapper">
     <div class="header">
-        <Image
-            src={header}
-            alt="lack of life, loss of life"
-            widths={[240, 540, 720, header.width]}
-            sizes={`(max-width: 360px) 240px, (max-width: 720px) 540px, (max-width: 1600px) 720px, ${header.width}px`}
+        <ImageToggleComponent
+            mobileImgUrl={post.data.imgHeadingMobile}
+            mobileWidth={500}
+            mobileHeight={100}
+            desktopImgUrl={post.data.imgHeading}
+            desktopWidth={1500}
+            desktopHeight={200}
+            toggleWidth={640}
         />
+        <!-- <Image
+            src={images[post.data.imgHeading]()}
+            alt="lack of life, loss of life"
+            widths={[240, 540, 720]}
+            sizes={`(max-width: 360px) 240px, (max-width: 720px) 540px, 720px`}
+        /> -->
         <!-- <h1 class="title">{post.data.title}</h1> -->
     </div>
     <div class="info">
-        <time datetime={post.data.publishDate.toISOString()}
+        <p class="lbl-date">Date:</p>
+        <ImageToggleComponent
+            mobileImgUrl={post.data.imgDateMobile}
+            mobileWidth={400}
+            mobileHeight={160}
+            desktopImgUrl={post.data.imgDate}
+            desktopWidth={2000}
+            desktopHeight={800}
+            toggleWidth={640}
+        />
+        <!-- <time datetime={post.data.publishDate.toISOString()}
             >{post.data.publishDate.toDateString().slice(4, 15)}</time
-        >
+        > -->
     </div>
     <div class="doodle">
         <div class="notes">Additional Notes:</div>
-        <Image
-            src={quote}
-            alt="lack of life, loss of life"
-            widths={[240, 540, 720, header.width]}
-            sizes={`(max-width: 360px) 240px, (max-width: 720px) 540px, (max-width: 1600px) 720px, ${header.width}px`}
+        <ImageToggleComponent
+            mobileImgUrl={post.data.imgDoodleMobile}
+            mobileWidth={900}
+            mobileHeight={600}
+            desktopImgUrl={post.data.imgDoodle}
+            desktopWidth={600}
+            desktopHeight={900}
+            toggleWidth={640}
         />
     </div>
 
     <h3 class="subtitle">{post.data.description}</h3>
     <div set:html={post.data.previewText} class="preview" />
     <div class="footer">
-        <a href={`/posts/${post.slug}`}>read</a><Icon name="maki:arrow" />
+        <!-- <a href={`/posts/${post.slug}`}> -->
+        <ImageToggleComponent
+            mobileImgUrl={post.data.imgCallToActionMobile}
+            mobileWidth={600}
+            mobileHeight={100}
+            desktopImgUrl={post.data.imgCallToAction}
+            desktopWidth={1200}
+            desktopHeight={100}
+            toggleWidth={640}
+        />
+        <!-- <Image
+            src={images[post.data.imgCallToActionHover]()}
+            class="img-hover-on"
+            alt="lack of life, loss of life"
+            widths={[240, 540, 720]}
+            sizes={`(max-width: 360px) 240px, (max-width: 720px) 540px, (max-width: 1600px) 720px`}
+        /> -->
+        <!-- </a> -->
     </div>
 </div>
 <style>
+    .img-hover-off {
+        opacity: 100%;
+    }
+
+    .img-hover-on {
+        opacity: 0%;
+    }
     .wrapper {
         container: wrapper / inline-size;
 
@@ -52,7 +109,6 @@ const { post } = Astro.props;
         border-radius: var(--radius-2);
         box-shadow: var(--shadow-3);
 
-        background-image: url(../assets/handmadepaper.webp);
         background-repeat: repeat;
     }
 
@@ -64,6 +120,7 @@ const { post } = Astro.props;
 
         border-bottom: var(--border-size-3) black solid;
         background-color: var(--color-main-light);
+        background-image: url();
 
         img {
             position: absolute;
@@ -77,11 +134,25 @@ const { post } = Astro.props;
     }
 
     .info {
+        position: relative;
         grid-column: 3 / 4;
         grid-row: 2 / 3;
-        background-color: var(--color-highlight);
+        aspect-ratio: 2.5;
+        background-color: var(--color-bg-light);
         border-left: var(--border-size-3) black solid;
         border-bottom: var(--border-size-3) black solid;
+        background-size: contain;
+        .lbl-date {
+            padding-left: var(--size-1);
+            position: absolute;
+            font-weight: 700;
+        }
+        img {
+            position: absolute;
+            height: auto;
+            inset: 0;
+            margin: auto;
+        }
     }
     .doodle {
         background-color: var(--color-bg-light);
@@ -91,22 +162,24 @@ const { post } = Astro.props;
         grid-row: 3 / 4;
 
         position: relative;
+
         width: 100%;
         min-height: 15rem;
 
         .notes {
+            position: absolute;
             width: fit-content;
-            padding: var(--size-1);
+            padding-left: var(--size-1);
+            font-weight: 700;
             /* background-color: var(--color-highlight);
             border-bottom: var(--border-thick);
             border-right: var(--border-thick); */
         }
         img {
             position: absolute;
+            aspect-ratio: 2/3;
             max-width: 100%;
             width: 100%;
-            height: auto;
-            aspect-ratio: 1;
             inset: 0;
             margin: auto;
         }
@@ -134,14 +207,18 @@ const { post } = Astro.props;
     .footer {
         grid-column: 1 / 4;
         position: relative;
-        display: flex;
-        flex-direction: row;
-        justify-content: right;
-        align-items: center;
+        aspect-ratio: 12;
+        min-height: 2rem;
         background-color: var(--color-highlight);
         border-top: var(--border-size-3) solid black;
         padding: var(--size-1) var(--size-3);
 
+        img {
+            position: absolute;
+            height: auto;
+            inset: 0;
+            margin: auto;
+        }
         a {
             display: block;
             margin-right: var(--size-2);
@@ -168,21 +245,25 @@ const { post } = Astro.props;
         }
     }
 
-    @container wrapper (width < 35rem) {
+    @media (width < 640px) {
         .header {
             grid-column: span 3;
+            aspect-ratio: 1200/240;
         }
         .info {
-            grid-column: span 2;
-            grid-row: 4;
+            grid-column: span 3;
+            grid-row: 5;
+            aspect-ratio: 5;
             border: 0;
-            border-right: var(--border-size-3);
+            border-bottom: var(--border-thick);
         }
         .doodle {
             grid-column: span 3;
-            grid-row: 5;
+            grid-row: 4;
+
+            aspect-ratio: 3/2;
             border: 0;
-            border-top: var(--border-size-3) black solid;
+            border-bottom: var(--border-thick);
             img {
                 width: auto;
                 height: 100%;
@@ -197,12 +278,28 @@ const { post } = Astro.props;
             grid-column: span 3;
             grid-row: 3;
             font-size: var(--font-size-1);
-            border-bottom: var(--border-size-3) black solid;
+            border-bottom: var(--border-thick);
+            background-image: url("../assets/hip-square.webp");
         }
         .footer {
-            grid-column: span 1;
-            grid-row: 4;
+            grid-column: span 3;
+            grid-row: 6;
+            aspect-ratio: 6;
             border: 0;
         }
     }
 </style>
+<script>
+    const hoverImages = document.querySelectorAll(".img-hover-on");
+    const nonHoverImages = document.querySelectorAll(".img-hover-off");
+
+    hoverImages.forEach((img) => {
+        console.log(img);
+        img.addEventListener("click", (e) => {
+            const element = e.target as HTMLElement;
+            console.log(element);
+            element.setAttribute("style", "opacity:0%");
+            const nextElement = element.nextSibling;
+        });
+    });
+</script>
