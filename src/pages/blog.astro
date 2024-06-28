@@ -1,14 +1,12 @@
 ---
-import { getEntry } from "astro:content";
 import BasePageLayout from "../layouts/BasePageLayout.astro";
 
-import { getCollection, getEntries } from "astro:content";
-import { getEntryBySlug } from "astro:content";
-const allBlogPosts = await getCollection('posts')
-const lackOfLifePost = await getEntry('posts', 'lack-of-life-loss-of-joy')
-const { Content, headings } = await lackOfLifePost.render()
+import { getCollection } from "astro:content";
+import PostList from "src/components/PostList.astro";
+import MainPageLayout from "src/layouts/MainPageLayout.astro";
+const allBlogPosts = await getCollection("posts");
 ---
-<BasePageLayout>
-    {lackOfLifePost.data.title}
-    <Content />
-</BasePageLayout>
+
+<MainPageLayout>
+    <PostList posts={allBlogPosts} />
+</MainPageLayout>
