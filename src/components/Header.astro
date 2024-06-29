@@ -7,10 +7,10 @@ import ImageToggleComponent from "./ImageToggleComponent.astro";
 <header>
     <div class="logo">
         <ImageToggleComponent
-            mobileImgUrl="/assets/site/icon-logo.png"
+            mobileImgUrl="/assets/site/icons/icon-logo.png"
             mobileWidth={100}
             mobileHeight={100}
-            desktopImgUrl="/assets/site/icon-logo.png"
+            desktopImgUrl="/assets/site/icons/icon-logo.png"
             desktopWidth={100}
             desktopHeight={100}
             toggleWidth={640}
@@ -28,8 +28,16 @@ import ImageToggleComponent from "./ImageToggleComponent.astro";
             class="primary-navigation"
             data-visible="false"
         >
-            <li><a href="/">Blog</a></li>
-            <li><a href="/about">About</a></li>
+            <li>
+                <a href="/" class="link-menu menu-blog"
+                    ><span class="sr-only">Blog</span>
+                </a>
+            </li>
+            <li>
+                <a href="/about" class="link-menu menu-about"
+                    ><span class="sr-only">About</span></a
+                >
+            </li>
         </ul>
     </nav>
 </header>
@@ -56,6 +64,29 @@ import ImageToggleComponent from "./ImageToggleComponent.astro";
         font-size: var(--size-7);
         text-decoration: none;
     }
+
+    .link-menu {
+        display: block;
+        height: 2.5rem;
+        aspect-ratio: 3;
+
+        &.menu-blog {
+            background: url("/public/assets/site/menu/menu-blog.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            &:hover {
+                background-image: url("/public/assets/site/menu/menu-blog-hover.png");
+            }
+        }
+        &.menu-about {
+            background: url("/public/assets/site/menu/menu-about.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            &:hover {
+                background-image: url("/public/assets/site/menu/menu-about-hover.png");
+            }
+        }
+    }
     .btn-tgl-nav {
         position: absolute;
         display: none;
@@ -67,7 +98,7 @@ import ImageToggleComponent from "./ImageToggleComponent.astro";
         right: var(--size-5);
         z-index: 9999;
 
-        background: url(/public/assets/site/navbar-menu-open.png);
+        background: url(/public/assets/site/icons/navbar-menu-open.png);
         border: 0;
         background-repeat: no-repeat;
         background-size: contain;
@@ -76,7 +107,7 @@ import ImageToggleComponent from "./ImageToggleComponent.astro";
     .primary-navigation {
         display: flex;
         flex-direction: row;
-        gap: var(--size-7);
+        gap: var(--size-3);
         z-index: 1000;
 
         list-style: none;
@@ -111,11 +142,28 @@ import ImageToggleComponent from "./ImageToggleComponent.astro";
         .primary-navigation[data-visible="true"] {
             transform: translateX(0%);
         }
+        .link-menu {
+            &.menu-blog {
+                background-image: url(/public/assets/site/menu/menu-blog-mobile.png);
+
+                &:hover {
+                    background-image: url(/public/assets/site/menu/menu-blog-mobile.png);
+                }
+            }
+
+            &.menu-about {
+                background-image: url(/public/assets/site/menu/menu-about-mobile.png);
+
+                &:hover {
+                    background-image: url(/public/assets/site/menu/menu-about-mobile.png);
+                }
+            }
+        }
         .btn-tgl-nav {
             display: block;
         }
         .btn-tgl-nav[aria-expanded="true"] {
-            background-image: url("/public/assets/site/navbar-menu-close.png");
+            background-image: url("/public/assets/site/icons/navbar-menu-close.png");
         }
         a {
             color: black;
