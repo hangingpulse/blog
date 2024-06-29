@@ -113,7 +113,7 @@ import ImageToggleComponent from "./ImageToggleComponent.astro";
         position: relative;
 
         width: 100%;
-        min-height: 15rem;
+        min-height: 25rem;
 
         .notes {
             padding-left: var(--size-1);
@@ -144,7 +144,7 @@ import ImageToggleComponent from "./ImageToggleComponent.astro";
 
         line-height: var(--font-lineheight-2);
 
-        font-size: var(--font-size-2);
+        font-size: var(--font-size-3);
         font-weight: 700;
         text-align: left;
     }
@@ -154,6 +154,10 @@ import ImageToggleComponent from "./ImageToggleComponent.astro";
         grid-row: 3 / 4;
         padding: var(--size-2);
         padding-bottom: 0;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
     .footer {
@@ -238,7 +242,6 @@ import ImageToggleComponent from "./ImageToggleComponent.astro";
         h3 {
             grid-column: span 3;
             grid-row: 2;
-            font-size: var(--font-size-2);
         }
         .preview {
             grid-column: span 3;

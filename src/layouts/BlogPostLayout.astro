@@ -1,50 +1,69 @@
 ---
-import { fade } from 'astro:transitions'
+import ImageToggleComponent from "src/components/ImageToggleComponent.astro";
 // Hier kommen dann die content collection imports hin
-const {frontmatter} = Astro.props;
+const { frontmatter } = Astro.props;
 ---
-<div class="container" >
-    <div class="header">
-        <h1 class="title">{frontmatter.title}</h1>
-    <h3 class="subtitle">{frontmatter.description}</h3>
-    </div>
-    <div class="content">
 
-        <slot/>
+<div class="wrapper">
+    <div class="header">
+        <ImageToggleComponent
+            mobileImgUrl={frontmatter.imgHeadingMobile}
+            mobileWidth={500}
+            mobileHeight={100}
+            desktopImgUrl={frontmatter.imgHeading}
+            desktopWidth={1500}
+            desktopHeight={200}
+            toggleWidth={640}
+        />
+    </div>
+    <h3 class="subtitle">{frontmatter.description}</h3>
+    <div class="content">
+        <slot />
     </div>
 </div>
+
 <style>
-    .container {
-         display: flex;
-         flex-direction: column;
+    .wrapper {
+        display: flex;
+        flex-direction: column;
 
-         background-color: var(--color-bg-light);
-         border: var(--border-size-1) solid var(--gray-4); 
-         border-radius: var(--radius-2);
-         box-shadow: var(--shadow-2);
+        background-color: var(--color-bg-light);
+        border: var(--border-thick);
+        border-radius: var(--radius-2);
+        box-shadow: var(--shadow-3);
 
-        overflow: hidden;
+        margin: var(--size-2) var(--size-4);
     }
 
     .header {
-        /* background-color: #70919C; */
-        background-color: var(--color-main-light); 
-        padding: var(--size-3);
-        color: var(--color-highlight);
-    }
-    h1 {
-        line-height: var(--font-lineheight-1);
-        /* color: var(--color-bg-light); */
+        width: 100%;
+        aspect-ratio: 1200/160;
+        position: relative;
+        grid-column: span 3;
+
+        border-bottom: var(--border-size-3) black solid;
+        background-color: var(--color-main-light);
+        background-image: url();
+
+        :global(img) {
+            position: absolute;
+            max-width: 100%;
+            height: auto;
+        }
     }
 
     h3 {
-        /* color: var(--color-bg-light); */
+        padding: var(--size-2) var(--size-3);
+        border-bottom: var(--border-thick);
+        background-color: var(--color-secondary-light);
+
         line-height: var(--font-lineheight-2);
-        font-size: var(--font-size-2);
-        font-weight: 400;
+
+        font-size: var(--font-size-3);
+        font-weight: 700;
+        text-align: left;
     }
     .content {
-
         padding: var(--size-3);
     }
     .content :global(p) {
@@ -54,4 +73,9 @@ const {frontmatter} = Astro.props;
         margin-top: var(--font-size-4);
         margin-bottom: var(--font-size-2);
     }
-    </style>
+    @media (width < 640px) {
+        .header {
+            aspect-ratio: 1200/240;
+        }
+    }
+</style>

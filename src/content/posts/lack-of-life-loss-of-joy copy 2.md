@@ -1,7 +1,7 @@
 ---
 layout: "../../layouts/BlogPostLayout.astro"
 title: Lack of Life, Loss of Joy
-description: A screenwriter's personal and systemic perspective on the German film industry
+description: A writer's personal and systemic perspective on the German film industry
 previewText: "<p>Life is simple when you are writing.</p><p>You sit down with pen and paper and laptop and then you just put one word down and another and another. Life is not simple when you are a writer, though. And it is unbearably difficult when you’re a talented screenwriter in Germany.</p><p>You see, we have it all. The funding, the education, the technical knowledge. We have a solid infrastructure and a social security net. We should be making great movies and sometimes we do.</p><p>But mostly we don’t.</p>"
 publishDate: 2024-06-23
 imgHeading: "/assets/lack-of-life-loss-of-joy/lack-of-life-loss-of-joy-header.png"

@@ -50,6 +50,8 @@ import ImageToggleComponent from "./ImageToggleComponent.astro";
         padding: 0.5rem 2rem 0.5rem 1rem;
         margin-bottom: var(--size-3);
         background-color: var(--color-main-light);
+        border-bottom: var(--border-thick);
+        box-shadow: var(--shadow-2);
 
         color: var(--color-highlight);
         font-family: var(--font-serif);
@@ -131,9 +133,13 @@ import ImageToggleComponent from "./ImageToggleComponent.astro";
     @media (width < 640px) {
         .primary-navigation {
             position: fixed;
-            inset: 0 0 0 30%;
-            background-color: var(--color-highlight);
             flex-direction: column;
+            inset: 0 0 10% 30%;
+
+            background-color: var(--color-highlight);
+            border: var(--border-thick);
+            box-shadow: var(--shadow-3);
+
             padding: min(20vh, var(--size-8)) var(--size-4);
             transform: translateX(100%);
             transition: transform 150ms ease-out;
