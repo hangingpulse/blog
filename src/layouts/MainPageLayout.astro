@@ -3,15 +3,16 @@ import BasePageLayout from "./BasePageLayout.astro";
 import Header from "../components/Header.astro";
 import Sidebar from "../components/Sidebar.astro";
 ---
+
 <BasePageLayout>
-    <Header/>
+    <Header />
     <div class="container">
         <div class="content">
-            <slot/>
+            <slot />
         </div>
-        <div class="sidebar">
+        <!-- <div class="sidebar">
             <Sidebar/>
-        </div>
+        </div> -->
     </div>
 </BasePageLayout>
 <style>
@@ -20,17 +21,14 @@ import Sidebar from "../components/Sidebar.astro";
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
-
     }
     .content {
-        min-width: 20rem; 
+        min-width: 20rem;
         max-width: 50rem;
         padding-right: var(--size-3);
     }
     .sidebar {
-
         border-left: var(--border-size-1) solid black;
         padding-left: var(--size-3);
     }
-
 </style>
