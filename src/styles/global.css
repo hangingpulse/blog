@@ -9,7 +9,7 @@
     --color-font-light: white;
 
     --color-highlight: #cdac81;
-    --color-highlight-transparent: hsl(34, 43%, 65%, 90%);
+    --color-highlight-transparent: hsl(34, 43%, 65%, 20%);
 
     --font-sansserif: "Open Sans Variable", Helvetica, sans-serif;
     --font-serif: "Josefin Slab Variable", "Times New Roman", Times, serif;

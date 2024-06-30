@@ -24,8 +24,9 @@ import { ViewTransitions } from "astro:transitions";
         <slot />
         <style>
             body {
-                background: var(--color-bg-light);
+                background-color: var(--color-highlight-transparent);
                 background-image: url("/assets/site/backgrounds/ep_naturalwhite.webp");
+                background-blend-mode: multiply;
             }
         </style>
     </body>
