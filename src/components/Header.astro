@@ -7,12 +7,12 @@ import ImageToggleComponent from "./ImageToggleComponent.astro";
 <header>
     <div class="logo">
         <ImageToggleComponent
-            mobileImgUrl="/assets/site/icons/icon-logo-shadow.png"
-            mobileWidth={100}
-            mobileHeight={100}
-            desktopImgUrl="/assets/site/icons/icon-logo-shadow.png"
-            desktopWidth={100}
-            desktopHeight={100}
+            mobileImgUrl="/assets/site/menu/heading-page-mobile.png"
+            mobileWidth={1000}
+            mobileHeight={200}
+            desktopImgUrl="/assets/site/menu/heading-page.png"
+            desktopWidth={1000}
+            desktopHeight={200}
             toggleWidth={640}
         />
         <h1>hangingpulse.com</h1>
@@ -56,8 +56,8 @@ import ImageToggleComponent from "./ImageToggleComponent.astro";
         color: var(--color-highlight);
         font-family: var(--font-serif);
 
-        :global(img) {
-            width: 3rem;
+        .logo :global(img) {
+            max-width: 18rem;
         }
     }
 
@@ -96,7 +96,6 @@ import ImageToggleComponent from "./ImageToggleComponent.astro";
         width: 3rem;
         aspect-ratio: 1;
 
-        top: var(--size-2);
         right: var(--size-5);
         z-index: 9999;
 
@@ -131,6 +130,14 @@ import ImageToggleComponent from "./ImageToggleComponent.astro";
         text-decoration: underline;
     }
     @media (width < 640px) {
+        header {
+            padding: 0.5rem 0.5rem;
+        }
+
+        .logo :global(img) {
+            width: 9rem;
+        }
+
         .primary-navigation {
             position: fixed;
             flex-direction: column;

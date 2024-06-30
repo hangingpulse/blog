@@ -1,20 +1,41 @@
 ---
-import { Debug } from "astro:components";
-import PostPreview from "./PostPreview.astro";
 import BlogPostPreview from "./BlogPostPreview.astro";
 const { posts } = Astro.props;
 
 import { Image } from "astro:assets";
+import headingImg from "/assets/site/menu/heading-blog-list.png";
 ---
 
 <!-- <h1>Stuff to read</h1> -->
-<div class="container">
+<div class="wrapper">
+    <h1 class="img-heading">
+        <Image
+            src="/assets/site/menu/heading-blog-list.png"
+            alt="All Posts"
+            width={1500}
+            height={200}
+        />
+        <span class="sr-only">All Posts</span>
+    </h1>
     {posts.map((post) => <BlogPostPreview post={post} />)}
 </div>
 <style>
-    .container {
+    .wrapper {
         display: flex;
         flex-direction: column;
+        align-items: center;
         gap: var(--size-4);
+    }
+    .img-heading {
+        margin: var(--size-2) 0;
+        > :global(img) {
+            max-width: 30rem;
+            height: auto;
+        }
+    }
+    @media (width < 640px) {
+        .img-heading > :global(img) {
+            max-width: 20rem;
+        }
     }
 </style>

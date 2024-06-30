@@ -1,6 +1,8 @@
 ---
 const { post } = Astro.props;
 
+const randomRotation = Math.random() * 5 + 2 + "deg";
+
 import ImageToggleComponent from "./ImageToggleComponent.astro";
 ---
 
@@ -20,7 +22,6 @@ import ImageToggleComponent from "./ImageToggleComponent.astro";
         >
     </div>
     <div class="doodle" data-visible="false">
-        <div class="notes">Notes:</div>
         <ImageToggleComponent
             mobileImgUrl={post.data.imgNotes}
             mobileWidth={600}
@@ -48,7 +49,7 @@ import ImageToggleComponent from "./ImageToggleComponent.astro";
         </a>
     </div>
 </div>
-<style>
+<style define:vars={{ randomRotation }}>
     .wrapper {
         container: wrapper / inline-size;
 
@@ -115,7 +116,7 @@ import ImageToggleComponent from "./ImageToggleComponent.astro";
         width: 100%;
         min-height: 25rem;
 
-        transform: scale(0.99) rotate(5deg);
+        transform: scale(0.99) rotate(var(--randomRotation));
 
         .notes {
             padding-left: var(--size-1);
