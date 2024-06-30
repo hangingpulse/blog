@@ -6,6 +6,7 @@ import ImageToggleComponent from "./ImageToggleComponent.astro";
 
 <header>
     <div class="logo">
+        <a href="/" class="link-home"><span class="sr-only">Home</span></a>
         <ImageToggleComponent
             mobileImgUrl="/assets/site/menu/heading-page-mobile.png"
             mobileWidth={1000}
@@ -59,6 +60,15 @@ import ImageToggleComponent from "./ImageToggleComponent.astro";
         .logo :global(img) {
             max-width: 18rem;
         }
+    }
+    .logo {
+        position: relative;
+    }
+    .link-home {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
     }
 
     h1 {

@@ -15,3 +15,5 @@ I'm coding it myself. If stuff isn't working, it's probably my fault, so let me 
 Anyway, in the future this will also be a place where I offer process-oriented coaching for screenwriters and other creatives. I haven't fully figured out what that means yet. You can read my (only) blog post for more thoughts on process-oriented creativity.
 
 If you are interested in that or in anything else you find on here, let me know!
+
+You can't let me know at the moment because I haven't added a way to contact me. Guess you have to come back then. See you around!
