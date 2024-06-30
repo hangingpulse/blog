@@ -1,12 +1,15 @@
 @import "https://unpkg.com/open-props";
 :root {
     --color-main-light: #00303f;
+    --color-main-light-transparent: hsl(194, 100%, 12%, 90%);
     --color-secondary-light: #cae4db;
+    --color-secondary-light-transparent: hsl(159, 33%, 84%, 90%);
     --color-bg-light: #f5f4f4;
-    --color-main-dark: ;
+    --color-bg-light-transparent: hsl(0deg, 4.76%, 95.9%, 90%);
     --color-font-light: white;
 
     --color-highlight: #cdac81;
+    --color-highlight-transparent: hsl(34, 43%, 65%, 90%);
 
     --font-sansserif: "Open Sans Variable", Helvetica, sans-serif;
     --font-serif: "Josefin Slab Variable", "Times New Roman", Times, serif;

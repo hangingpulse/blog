@@ -7,10 +7,10 @@ import ImageToggleComponent from "./ImageToggleComponent.astro";
 <div class="wrapper">
     <div class="header">
         <ImageToggleComponent
-            mobileImgUrl={post.data.imgHeadingMobile}
+            mobileImgUrl={post.data.imgHeaderMobile}
             mobileWidth={500}
             mobileHeight={100}
-            desktopImgUrl={post.data.imgHeading}
+            desktopImgUrl={post.data.imgHeader}
             desktopWidth={1500}
             desktopHeight={200}
             toggleWidth={640}
@@ -20,12 +20,12 @@ import ImageToggleComponent from "./ImageToggleComponent.astro";
         >
     </div>
     <div class="doodle" data-visible="false">
-        <div class="notes">Additional Notes:</div>
+        <div class="notes">Notes:</div>
         <ImageToggleComponent
-            mobileImgUrl={post.data.imgDoodle}
+            mobileImgUrl={post.data.imgNotes}
             mobileWidth={600}
             mobileHeight={900}
-            desktopImgUrl={post.data.imgDoodle}
+            desktopImgUrl={post.data.imgNotes}
             desktopWidth={600}
             desktopHeight={900}
             toggleWidth={640}
@@ -63,7 +63,7 @@ import ImageToggleComponent from "./ImageToggleComponent.astro";
         border-radius: var(--radius-2);
         box-shadow: var(--shadow-3);
 
-        background-repeat: repeat;
+        background-color: var(--color-bg-light);
     }
     .btn-tgl-info {
         position: absolute;
@@ -80,7 +80,7 @@ import ImageToggleComponent from "./ImageToggleComponent.astro";
         border-radius: 50%;
         box-shadow: var(--shadow-3);
 
-        background: url("/public/assets/site/icons/icon-info.png");
+        background: url("/assets/site/icons/icon-info.png");
         background-color: var(--color-highlight);
         background-size: contain;
         background-repeat: no-repeat;
@@ -94,7 +94,6 @@ import ImageToggleComponent from "./ImageToggleComponent.astro";
 
         border-bottom: var(--border-size-3) black solid;
         background-color: var(--color-main-light);
-        background-image: url();
 
         :global(img) {
             position: absolute;
@@ -104,8 +103,9 @@ import ImageToggleComponent from "./ImageToggleComponent.astro";
     }
 
     .doodle {
-        background-color: var(--color-bg-light);
-        border-left: var(--border-size-3) solid black;
+        border: var(--border-size-3) solid black;
+        box-shadow: var(--shadow-2);
+        background: url("/assets/site/backgrounds/hip-square.webp");
 
         grid-column: 3 / 4;
         grid-row: 3 / 4;
@@ -114,6 +114,8 @@ import ImageToggleComponent from "./ImageToggleComponent.astro";
 
         width: 100%;
         min-height: 25rem;
+
+        transform: scale(0.99) rotate(5deg);
 
         .notes {
             padding-left: var(--size-1);
@@ -155,6 +157,7 @@ import ImageToggleComponent from "./ImageToggleComponent.astro";
         padding: var(--size-2);
         padding-bottom: 0;
 
+        background-color: var(--color-bg-light);
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -165,9 +168,17 @@ import ImageToggleComponent from "./ImageToggleComponent.astro";
         position: relative;
         aspect-ratio: 12;
         min-height: 2rem;
-        background-color: var(--color-highlight);
-        border-top: var(--border-size-3) solid black;
         padding: var(--size-1) var(--size-3);
+
+        background-color: var(--color-highlight);
+        border: var(--border-size-3) solid black;
+
+        transform: perspective(1000px) translateY(-5px) translateZ(-10px);
+        box-shadow: var(--shadow-3);
+
+        &:hover {
+            transform: translateY(-3px) translateZ(-1px);
+        }
 
         :global(img) {
             position: absolute;
@@ -206,7 +217,7 @@ import ImageToggleComponent from "./ImageToggleComponent.astro";
             display: block;
         }
         .btn-tgl-info[aria-expanded="true"] {
-            background-image: url("/public/assets/site/icons/icon-info-close.png");
+            background-image: url("/assets/site/icons/icon-info-close.png");
         }
         .header {
             grid-column: span 3;
@@ -227,6 +238,8 @@ import ImageToggleComponent from "./ImageToggleComponent.astro";
             aspect-ratio: 2/3;
             border: var(--border-thick);
             box-shadow: var(--shadow-3);
+            background: url("/assets/site/backgrounds/hip-square.webp");
+            background-repeat: repeat;
 
             transform: translateY(-150%);
             transition: transform 150ms ease-out;
@@ -247,13 +260,11 @@ import ImageToggleComponent from "./ImageToggleComponent.astro";
             grid-column: span 3;
             grid-row: 3;
             font-size: var(--font-size-1);
-            border-bottom: var(--border-thick);
         }
         .footer {
             grid-column: span 3;
             grid-row: 6;
             aspect-ratio: 6;
-            border: 0;
         }
     }
 </style>
