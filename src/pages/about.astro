@@ -1,6 +1,11 @@
 ---
-import MainPageLayout from "../layouts/MainPageLayout.astro"
+import MainPageLayout from "../layouts/MainPageLayout.astro";
+import SimpleContentCard from "../layouts/SimpleContentCard.astro";
+import { getEntryBySlug } from "astro:content";
+const aboutContent = await getEntryBySlug("other", "about-me");
+const { Content } = await aboutContent.render();
 ---
+
 <MainPageLayout>
-    Work in Progress
+    <Content />
 </MainPageLayout>

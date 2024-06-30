@@ -1,0 +1,69 @@
+---
+import ImageToggleComponent from "src/components/ImageToggleComponent.astro";
+// Hier kommen dann die content collection imports hin
+const { frontmatter } = Astro.props;
+---
+
+<div class="wrapper">
+    <div class="header">
+        <ImageToggleComponent
+            mobileImgUrl={frontmatter.imgHeaderMobile}
+            mobileWidth={500}
+            mobileHeight={100}
+            desktopImgUrl={frontmatter.imgHeader}
+            desktopWidth={1500}
+            desktopHeight={200}
+            toggleWidth={640}
+        />
+    </div>
+    <div class="content">
+        <slot />
+    </div>
+</div>
+
+<style>
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+
+        background-color: var(--color-bg-light);
+        border: var(--border-thick);
+        border-radius: var(--radius-2);
+        box-shadow: var(--shadow-3);
+
+        margin: var(--size-2) var(--size-4);
+    }
+
+    .header {
+        width: 100%;
+        aspect-ratio: 1200/160;
+        position: relative;
+        grid-column: span 3;
+
+        border-bottom: var(--border-size-3) black solid;
+        background-color: var(--color-main-light);
+        background-image: url();
+
+        :global(img) {
+            position: absolute;
+            max-width: 100%;
+            height: auto;
+        }
+    }
+
+    .content {
+        padding: var(--size-3);
+    }
+    .content :global(p) {
+        margin-bottom: var(--font-size-2);
+    }
+    .content :global(h2) {
+        margin-top: var(--font-size-4);
+        margin-bottom: var(--font-size-2);
+    }
+    @media (width < 640px) {
+        .header {
+            aspect-ratio: 1200/240;
+        }
+    }
+</style>
